@@ -101,7 +101,7 @@ Make sure the following are installed:
 **1. Clone or download the project**
 
 ```bash
-git clone <your-github-repository-url>
+git clone <https://github.com/Shiv826singh/mini-healthcare-support-springboot.git>
 ```
 
 Or download and extract the ZIP file.
