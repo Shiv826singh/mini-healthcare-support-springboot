@@ -59,32 +59,6 @@ This application can support NGOs working in rural, remote, or underserved commu
 
 NGO volunteers or community health workers can use the platform during awareness campaigns, health camps, and community outreach programs. The application can also be extended with local languages, nearby hospital information, emergency contacts, and educational content for better accessibility.
 
-## 📁 Project Structure
-
-```text
-mini-healthcare-support/
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── healthcare/
-│       │           ├── MiniHealthcareApplication.java
-│       │           └── controller/
-│       │
-│       └── resources/
-│           ├── templates/
-│           │   └── dashboard.html
-│           │
-│           ├── static/
-│           │   └── css/
-│           │       └── style.css
-│           │
-│           └── application.properties
-│
-├── pom.xml
-└── README.md
-```
 
 ## ⚙️ How to Run the Project
 
@@ -163,18 +137,6 @@ This application is created for **educational and informational purposes only**.
 The Symptom Checker provides general information and should not be considered a medical diagnosis. Users should consult a qualified healthcare professional for medical advice, diagnosis or treatment.
 
 In case of a medical emergency, contact the appropriate local emergency service immediately.
-
-## 🎯 Internship Assignment Objective
-
-The objective of this project is to demonstrate the ability to:
-
-* Build a web application using Java and Spring Boot.
-* Create a simple user-friendly healthcare support interface.
-* Implement backend request handling using Spring MVC.
-* Connect frontend pages with backend functionality.
-* Follow a clean project structure.
-* Apply responsive web design principles.
-* Develop and document a complete mini-project.
 
 ## 👨‍💻 Author
 
