@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareHelp | Mini Healthcare Support</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="brand">❤ CareHelp</div>
+    <a href="#emergency">Emergency Help</a>
+</header>
+
+<main>
+    <section class="hero">
+        <div>
+            <p class="tag">MINI HEALTHCARE SUPPORT</p>
+            <h1>Simple support for everyday health needs.</h1>
+            <p class="subtitle">
+                Check basic symptom guidance and quickly access emergency information.
+            </p>
+            <a class="btn" href="#checker">Check a Symptom</a>
+        </div>
+        <div class="hero-card">
+            <div class="icon">+</div>
+            <h3>CareHelp</h3>
+            <p>Quick, simple and easy to use.</p>
+        </div>
+    </section>
+
+    <section id="checker" class="section">
+        <div class="section-title">
+            <p class="tag">SYMPTOM CHECKER</p>
+            <h2>How are you feeling?</h2>
+        </div>
+
+        <form class="checker" action="/check-symptom" method="post">
+            <label for="symptom">Select a common symptom</label>
+            <select id="symptom" name="symptom" required>
+                <option value="">Choose symptom</option>
+                <option th:each="s : ${symptoms}"
+                        th:value="${s}"
+                        th:text="${s}"
+                        th:selected="${selectedSymptom == s}">
+                </option>
+            </select>
+            <button class="btn" type="submit">Get Guidance</button>
+        </form>
+
+        <div class="result" th:if="${result}">
+            <h3>General Guidance</h3>
+            <p th:text="${result}"></p>
+        </div>
+    </section>
+
+    <section id="emergency" class="emergency">
+        <div>
+            <p class="tag">EMERGENCY HELP</p>
+            <h2>Need urgent medical assistance?</h2>
+            <p>For a real emergency, contact your local emergency service or visit the nearest hospital.</p>
+        </div>
+        <a class="emergency-btn" href="tel:112">Call 112</a>
+    </section>
+
+    <section class="disclaimer">
+        <strong>Medical Disclaimer:</strong>
+        This mini app is for educational and general informational support only.
+        It does not diagnose conditions or replace professional medical advice.
+    </section>
+</main>
+
+<footer>CareHelp • Mini Healthcare Support Web App • Java + Spring Boot</footer>
+</body>
+</html>
